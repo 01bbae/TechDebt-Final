@@ -131,7 +131,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.cs370.springdemo.MainClass</mainClass>
+                            <mainClass>com.cs370.springdemo.SpringDemoApplication</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
