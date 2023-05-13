@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(classes = SpringDemoApplication.class)
 @RunWith(SpringRunner.class)
-public class MessageRestMockControllerTest{
+public class StoreRestMockControllerTest{
 
     @Autowired
     private WebApplicationContext webApplicationContext;
@@ -30,9 +30,9 @@ public class MessageRestMockControllerTest{
 
     @Test
     public void shouldGetMessageById() throws Exception {
-        mockMvc.perform(get("/messages/1113")).andExpect(status().isOk())
+        mockMvc.perform(get("/stores/1")).andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
-                .andExpect(jsonPath("$.name").value("Aaron"))
-                .andExpect(jsonPath("$.lastname").value("Sundukovskiy"));
+                .andExpect(jsonPath("$.id").value("1"))
+                .andExpect(jsonPath("$.address").value("addr1"));
     }
 }
